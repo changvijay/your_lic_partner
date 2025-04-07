@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Title - My Website</title>
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+
+    a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      outline: none;
+      color: #333;
+      transition: all .2s ease-in-out;
+    }
+
+    ul { margin: 0; padding: 0; list-style: none; }
+    img { max-width: 100%; height: auto; }
+    section { padding: 60px 0; }
+
+    .btn {
+      padding: 14px 25px;
+      text-transform: uppercase;
+      transition: all .8s;
+    }
+    .red-btn {
+      background: #ed1b24;
+      border: 2px solid #ed1b24;
+      color: #fff;
+    }
+    .red-btn:hover {
+      background: #1c376c;
+      border-color: #fff;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(to bottom, #222023, #1e2c47);
+      color: #fff;
+      padding: 20px 0;
+      font-size: 17px;
+    }
+    footer h3, footer h4 { letter-spacing: 1px; }
+    footer a { color: #fff; }
+    footer a:hover { color: #ed1b24; }
+    .footer-title { border-bottom: 2px solid #a61f2d; margin-bottom: 35px; }
+    .footer-social { float: right; }
+    .footer-social li { display: inline; margin-right: 16px; }
+    .footer-social i {
+      width: 30px; height: 30px;
+      background: #fff; color: #222025;
+      text-align: center; line-height: 30px;
+      border-radius: 30px; font-size: 16px;
+      transition: all .5s;
+      font-weight: 800;
+    }
+    .footer-social i:hover { background: #ed1b24; color: #fff; }
+
+    .navbar.transparent { position: absolute; width: 100%; z-index: 999; transition: all .5s; }
+    .navbar.custom-navbar {
+      position: fixed; top: 0; width: 100%; z-index: 999;
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: all .5s;
+    }
+    .ul-custom {
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 15px;
+    }
+    .navbar-nav { margin: 0; padding: 0; }
+  </style>
+  <style>
+    .profile-card {
+margin: auto;
+background: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+overflow: hidden;
+padding: 20px;
+margin:2rem 0;
+} 
+.profile-img {
+width: 420px;
+height: 420px;
+object-fit: cover;
+border: 5px solid white;
+margin:16px;
+} 
+.profile-name {
+font-size: 1.5rem;
+font-weight: bold;
+color: #3a3a3a;
+} 
+.profile-text {
+color: gray;
+margin: 10px;
+text-align:justify;
+
+} 
+.social-icons a {
+margin: 0 5px;
+display: inline-block;
+color: white;
+width: 40px;
+height: 40px;
+line-height: 40px;
+border-radius: 50%;
+text-align: center;
+background-color: #007bff;
+} 
+.social-icons a:nth-child(2) {
+background-color: #dc3545;
+}
+.social-icons a:nth-child(3) {
+background-color: #f4a62a;
+}
+.bg-gradient-custom {
+background: linear-gradient(90deg, #0a53be 0%, #0d76c1 100%);
+color: #fff;
+}
+</style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-sm transparent">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="download.png" width="80" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul id="ul" class="navbar-nav ms-auto ul-custom">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="lifeinsurance.html">Life Insurance</a></li>
+          <li class="nav-item"><a class="nav-link" href="Testimonial.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <section class="container">
+        <div class="profile-card row align-items-center flex-column flex-md-row text-center text-md-start">
+            <div class="col-12 col-md-4 d-flex justify-content-center">
+                <img src="profile.png" class="profile-img" alt="Profile">
+            </div>
+            <div class="col-12 col-md-8">
+                <h3 class="profile-name"> Ba<i style="color: red;">s</i>kar</h3>
+                <p class="profile-text">As a dedicated LIC Agent, I have made it my mission to help individuals and families create a secure and financially sound future. With a deep understanding of insurance products and financial planning, I provide tailored solutions that align with my clients’ unique goals, whether it’s life insurance, retirement planning, wealth creation, child education, or tax-saving strategies. Over the years, I have had the privilege of guiding hundreds of clients through important life decisions, offering transparent advice and consistent support at every step. I believe in building long-term relationships based on trust, integrity, and commitment. My goal is not just to sell policies but to educate and empower my clients, helping them make informed choices that bring long-term benefits. Backed by LIC—India’s most trusted insurance provider with decades of experience—I offer a wide range of plans designed to suit different life stages and financial aspirations. Whether you're starting your career, planning your child’s future, or preparing for a stress-free retirement, I am here to guide you through it all. Every client is different, and I take the time to understand your priorities, provide customized options, and make the entire process seamless and stress-free. I strive to be not just your insurance advisor, but your long-term financial partner—someone you can turn to with confidence. Secure your future today with the right guidance and trusted support. Let’s connect and build a financial roadmap that truly works for you and your loved ones.<div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"></script>
+    </section>
+</div>
+
+  <!-- Contact Bar -->
+  <section class="footer-top no-padding" style="padding:0; position:relative; bottom:-60px; z-index:1;">
+    <div class="footer-contact-bar bg-primary mx-4 p-2">
+      <div class="row text-white align-items-center p-3 justify-content-between">
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="pl-3">
+            <p class="mb-0">Madiwala, Bangalore‑560068,</p>
+            <p class="mb-0">Karnataka, India</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-phone-alt"></i></div>
+          <div class="pl-3"><p class="mb-0">9886646506</p></div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icon-box p-2"><i class="fas fa-envelope"></i></div>
+          <div class="pl-3"><p class="mb-0">dsingh803@gmail.com</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding-top:120px; position:relative;">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row">
+          <div class="col-md-6 page-more-info">
+            <div class="footer-title"><h4>Page links</h4></div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="lifeinsurance.html">Life Insurance</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 open-hours">
+            <div class="footer-title">
+              <h4>Open hours</h4>
+              <ul class="footer-social">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td><i class="far fa-clock"></i> Monday to Friday</td><td>7:00 AM to 10:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Friday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Saturday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Sunday</td><td>6:00 AM to 11:00 PM</td></tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-sm-4"><a href="privacy.html">Privacy policy</a></div>
+          <div class="col-sm-8"><p>©️ 2025 Chang Group Pvt. Ltd. All rights reserved.</p></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    function toggleNavbar() {
+      var navbar = document.getElementById("navbarSupportedContent");
+      navbar.classList.toggle("show");
+    }
+    function updateNavbarStyle() {
+      var nav = document.getElementById('mainNav');
+      var ul = document.getElementById('ul');
+      if (window.innerWidth < 576) {
+        nav.classList.replace('transparent','custom-navbar');
+        ul.classList.remove('ul-custom');
+      } else {
+        if (window.scrollY > window.innerHeight / 2) {
+          nav.classList.replace('transparent','custom-navbar');
+          ul.classList.remove('ul-custom');
+        } else {
+          nav.classList.replace('custom-navbar','transparent');
+          ul.classList.add('ul-custom');
+        }
+      }
+    }
+    document.addEventListener('scroll', updateNavbarStyle);
+    window.addEventListener('load', updateNavbarStyle);
+    window.addEventListener('resize', updateNavbarStyle);
+  </script>
+</body>
+</html>

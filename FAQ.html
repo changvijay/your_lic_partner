@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Title - My Website</title>
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+
+    a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      outline: none;
+      color: #333;
+      transition: all .2s ease-in-out;
+    }
+
+    ul { margin: 0; padding: 0; list-style: none; }
+    img { max-width: 100%; height: auto; }
+    section { padding: 60px 0; }
+
+    .btn {
+      padding: 14px 25px;
+      text-transform: uppercase;
+      transition: all .8s;
+    }
+    .red-btn {
+      background: #ed1b24;
+      border: 2px solid #ed1b24;
+      color: #fff;
+    }
+    .red-btn:hover {
+      background: #1c376c;
+      border-color: #fff;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(to bottom, #222023, #1e2c47);
+      color: #fff;
+      padding: 20px 0;
+      font-size: 17px;
+    }
+    footer h3, footer h4 { letter-spacing: 1px; }
+    footer a { color: #fff; }
+    footer a:hover { color: #ed1b24; }
+    .footer-title { border-bottom: 2px solid #a61f2d; margin-bottom: 35px; }
+    .footer-social { float: right; }
+    .footer-social li { display: inline; margin-right: 16px; }
+    .footer-social i {
+      width: 30px; height: 30px;
+      background: #fff; color: #222025;
+      text-align: center; line-height: 30px;
+      border-radius: 30px; font-size: 16px;
+      transition: all .5s;
+      font-weight: 800;
+    }
+    .footer-social i:hover { background: #ed1b24; color: #fff; }
+
+    .navbar.transparent { position: absolute; width: 100%; z-index: 999; transition: all .5s; }
+    .navbar.custom-navbar {
+      position: fixed; top: 0; width: 100%; z-index: 999;
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: all .5s;
+    }
+    .ul-custom {
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 15px;
+    }
+    .navbar-nav { margin: 0; padding: 0; }
+  </style>
+  <style>
+    
+    h1 {
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+      background: #0077cc;
+      color: #fff;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ddd;
+    }
+    .faq-header {
+      background: #e7f1fb;
+      padding: 15px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background 0.3s;
+    }
+    .faq-header:hover {
+      background: #d0e4f7;
+    }
+    .faq-header h2 {
+      margin: 0;
+      font-size: 1.1em;
+      color: #0077cc;
+    }
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      background: #f9f9f9;
+      transition: max-height 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
+      opacity: 0;
+      padding: 0 20px;
+    }
+    .faq-content.open {
+      padding: 15px 20px;
+      max-height: 1000px; /* Increase if needed */
+      opacity: 1;
+    }
+    .faq-content p, .faq-content ul {
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+    .faq-content ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  </head>
+<body>
+    <nav id="mainNav" class="navbar navbar-expand-sm transparent">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="download.png" width="80" alt="Logo">
+          </a>
+          <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul id="ul" class="navbar-nav ms-auto ul-custom">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item"><a class="nav-link" href="lifeinsurance.html">Life Insurance</a></li>
+              <li class="nav-item"><a class="nav-link" href="Testimonial.html">Testimonials</a></li>
+              <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+<div>
+  <div class="container" style="padding-top:100px">
+    <h1>FAQ - Pros of Taking LIC Policies</h1>
+    
+    <!-- FAQ Item 1 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>1. Why is LIC a great choice under the new tax regime?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Even under the new tax regime where many traditional deductions are unavailable, LIC policies remain an excellent choice. Their core strengths lie in robust financial protection, a high claim settlement ratio, and a legacy of trust. These factors ensure your family is well-protected regardless of tax benefits.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 2 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>2. What are the major benefits of choosing LIC policies?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC policies offer comprehensive financial protection, consistent and reliable claim settlements, and a diverse range of products to suit various needs. Whether it's life cover, savings, or retirement planning, LIC’s trusted legacy and government backing make them a secure investment.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 3 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>3. How do LIC policies help in building long-term wealth?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Many LIC products, such as ULIPs and endowment plans, blend life cover with investment options. Regular premium payments not only ensure protection but also help accumulate savings over time, allowing you to build a corpus that can fund retirement, education, or other major financial goals.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>4. What unique advantages does LIC offer compared to other insurers?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC’s unique advantages include its long-standing heritage, credibility, and the backing of the government. With an extensive product portfolio and a nationwide network, LIC ensures personalized service and reliability. Its high claim settlement ratio and customer-centric approach set it apart from competitors.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>5. How do LIC policies offer peace of mind during uncertain times?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC policies are designed as a financial safety net. In times of crisis—be it health emergencies, loss of income, or other unforeseen events—the assurance of a prompt and reliable claim settlement ensures that your family can maintain their standard of living, providing true peace of mind.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>6. What makes LIC policies a holistic financial tool?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC policies go beyond simple life cover. They serve as an integrated financial planning tool by combining insurance with savings and investment. This holistic approach helps in planning for retirement, funding children’s education, and meeting other future financial goals, all under one umbrella.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 7 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>7. How does LIC ensure a high claim settlement ratio?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC has built a reputation for maintaining one of the highest claim settlement ratios in the industry. With stringent underwriting processes, dedicated claim teams, and government support, LIC prioritizes its commitment to ensuring that policyholders receive timely and fair compensation during challenging times.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 8 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>8. What types of LIC policies are available for different life stages?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC offers a diverse range of policies designed for various stages of life—from youthful ULIPs and endowment plans for early savings to comprehensive term insurance and retirement plans for mature financial planning. This variety ensures that there is a product tailored to meet your specific needs at every stage of life.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 9 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>9. How flexible are LIC policies in terms of premium payment options?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC policies offer a range of premium payment options to suit different financial capacities. Whether you prefer monthly, quarterly, semi-annual, or annual payments, LIC provides flexibility that helps you manage your cash flow while ensuring continuous protection.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 10 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>10. Can LIC policies be used for retirement planning and savings?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Yes, many LIC policies are designed with retirement planning in mind. Products such as pension plans and certain endowment policies help accumulate a retirement corpus over time, providing a steady income stream during your post-retirement years and ensuring a comfortable lifestyle.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 11 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>11. What additional benefits or riders can be attached to LIC policies?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC offers a variety of riders that can enhance your base policy. These include critical illness riders, accidental death benefits, and waiver of premium riders, among others. These riders allow you to customize your coverage, ensuring that you have tailored protection for various contingencies.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 12 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>12. How does LIC support policyholders through its customer service and network?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          LIC boasts a vast network of branches and service centers across India, ensuring that you receive personalized assistance and support at every step. Their dedicated customer service teams help with policy servicing, claim processing, and any queries you might have, reaffirming LIC’s commitment to customer satisfaction.
+        </p>
+      </div>
+    </div>
+      <!-- FAQ Item 4 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>Why Health Insurance?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Medical emergencies can occur unexpectedly, and rising healthcare costs shouldn’t prevent you from receiving quality treatment. Health insurance safeguards your savings during emergencies by offering cashless claim benefits—ensuring you can focus on recovery rather than overwhelming bills.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 5 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>How to change Nomination in the Policy?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Changing the nominee in your LIC policy is simple. You need to file Form 3750 along with:
+        </p>
+        <ul>
+          <li>Proof of relationship between you and the nominee</li>
+          <li>The policy contract (for endorsement)</li>
+          <li>A photocopy of your LIC policy</li>
+        </ul>
+        <p>You can update your nominee at any time during your policy term.</p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 6 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>How to Update Address?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          You can update your contact address on your policy using Offline Aadhaar. Simply click the link below and follow the instructions:
+        </p>
+        <p>
+          <a href="https://ebiz.licindia.in/D2CPM/?_ga=2.155407163.1855131267.1643959747-1137006311.1629281366#SelfAddressChange" target="_blank">Update Address</a>
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 7 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>How to pay Premium Online?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          Premium payment is simple and convenient online. Click the link below to be redirected to the LIC website, where you can complete your payment without registering if you prefer:
+        </p>
+        <p>
+          <a href="https://licindia.in/Home/Pay-Premium-Online" target="_blank">Pay Premium Online</a>
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 8 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>Which is the best LIC plan for age 0-25?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          For those aged 0-25, LIC offers policies such as ULIPs or endowment plans that blend protection with long-term savings. These plans help in building wealth early while ensuring financial security for your family.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 9 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>Which is the best LIC plan for age 25-45?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          In the age range of 25-45, a balanced approach is essential. Consider term plans with riders or ULIP policies that offer both protection and investment benefits, securing your family's future while helping you meet long-term financial goals.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 10 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>Which is the best LIC plan for age above 45?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          For individuals above 45, the focus shifts to immediate financial security and health benefits. LIC provides options such as money-back or traditional endowment plans, which cater to your current financial needs and health considerations.
+        </p>
+      </div>
+    </div>
+    
+    <!-- FAQ Item 11 -->
+    <div class="faq-item">
+      <div class="faq-header">
+        <h2>Which LIC Policy Should I Pick and How?</h2>
+        <span class="arrow">&#9654;</span>
+      </div>
+      <div class="faq-content">
+        <p>
+          With a broad range of LIC policies available, your choice should reflect your financial goals, immediate needs, and future plans. Whether it's a term plan for pure protection, a ULIP for a mix of investment and insurance, or an endowment plan for long-term savings, careful consideration of your requirements will help you make the best decision.
+        </p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+  <script>
+    // JavaScript for Accordion Behavior and Arrow Animation
+    const headers = document.querySelectorAll('.faq-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const arrow = header.querySelector('.arrow');
+        content.classList.toggle('open');
+        arrow.style.transform = content.classList.contains('open') ? 'rotate(90deg)' : 'rotate(0deg)';
+      });
+    });
+  </script>
+
+  <!-- Contact Bar -->
+  <section class="footer-top no-padding" style="padding:0; position:relative; bottom:-60px; z-index:1;">
+    <div class="footer-contact-bar bg-primary mx-4 p-2">
+      <div class="row text-white align-items-center p-3 justify-content-between">
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="pl-3">
+            <p class="mb-0">Madiwala, Bangalore‑560068,</p>
+            <p class="mb-0">Karnataka, India</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-phone-alt"></i></div>
+          <div class="pl-3"><p class="mb-0">9886646506</p></div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icon-box p-2"><i class="fas fa-envelope"></i></div>
+          <div class="pl-3"><p class="mb-0">dsingh803@gmail.com</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding-top:120px; position:relative;">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row">
+          <div class="col-md-6 page-more-info">
+            <div class="footer-title"><h4>Page links</h4></div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="lifeinsurance.html">Life Insurance</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 open-hours">
+            <div class="footer-title">
+              <h4>Open hours</h4>
+              <ul class="footer-social">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td><i class="far fa-clock"></i> Monday to Friday</td><td>7:00 AM to 10:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Friday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Saturday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Sunday</td><td>6:00 AM to 11:00 PM</td></tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-sm-4"><a href="privacy.html">Privacy policy</a></div>
+          <div class="col-sm-8"><p>©️ 2025 Chang Group Pvt. Ltd. All rights reserved.</p></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    function toggleNavbar() {
+      var navbar = document.getElementById("navbarSupportedContent");
+      navbar.classList.toggle("show");
+    }
+    function updateNavbarStyle() {
+      var nav = document.getElementById('mainNav');
+      var ul = document.getElementById('ul');
+      if (window.innerWidth < 576) {
+        nav.classList.replace('transparent','custom-navbar');
+        ul.classList.remove('ul-custom');
+      } else {
+        if (window.scrollY > window.innerHeight / 2) {
+          nav.classList.replace('transparent','custom-navbar');
+          ul.classList.remove('ul-custom');
+        } else {
+          nav.classList.replace('custom-navbar','transparent');
+          ul.classList.add('ul-custom');
+        }
+      }
+    }
+    document.addEventListener('scroll', updateNavbarStyle);
+    window.addEventListener('load', updateNavbarStyle);
+    window.addEventListener('resize', updateNavbarStyle);
+  </script>
+</body>
+</html>

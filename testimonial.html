@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Title - My Website</title>
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+body{background: linear-gradient(90deg, #0a53be 0%, #0d76c1 100%);
+}
+    a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      outline: none;
+      color: #333;
+      transition: all .2s ease-in-out;
+    }
+
+    ul { margin: 0; padding: 0; list-style: none; }
+    img { max-width: 100%; height: auto; }
+    section { padding: 60px 0; }
+
+    .btn {
+      padding: 14px 25px;
+      text-transform: uppercase;
+      transition: all .8s;
+    }
+    .red-btn {
+      background: #ed1b24;
+      border: 2px solid #ed1b24;
+      color: #fff;
+    }
+    .red-btn:hover {
+      background: #1c376c;
+      border-color: #fff;
+    }
+
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(to bottom, #222023, #1e2c47);
+      color: #fff;
+      padding: 20px 0;
+      font-size: 17px;
+    }
+    footer h3, footer h4 { letter-spacing: 1px; }
+    footer a { color: #fff; }
+    footer a:hover { color: #ed1b24; }
+    .footer-title { border-bottom: 2px solid #a61f2d; margin-bottom: 35px; }
+    .footer-social { float: right; }
+    .footer-social li { display: inline; margin-right: 16px; }
+    .footer-social i {
+      width: 30px; height: 30px;
+      background: #fff; color: #222025;
+      text-align: center; line-height: 30px;
+      border-radius: 30px; font-size: 16px;
+      transition: all .5s;
+      font-weight: 800;
+    }
+    .footer-social i:hover { background: #ed1b24; color: #fff; }
+
+    .navbar.transparent { position: absolute; width: 100%; z-index: 999; transition: all .5s; }
+    .navbar.custom-navbar {
+      position: fixed; top: 0; width: 100%; z-index: 999;
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      transition: all .5s;
+    }
+    .ul-custom {
+      background: #fff;
+      box-shadow: 0 8px 32px rgba(31,38,135,0.37);
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 15px;
+    }
+    .navbar-nav { margin: 0; padding: 0; }
+  </style>
+   <style>
+    .testimonial-card {
+ max-width: 500px;
+ margin: 20px auto; 
+ background-color: #fff;
+ color: #333;
+ border-radius: 8px;
+ padding: 2rem;
+ box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+} 
+.testimonial-image {
+ width: 150px;
+ height: 150px;
+ object-fit: cover;
+ border-radius: 50%;
+ margin-bottom: 1rem;
+} 
+.carousel-control-prev-icon{
+background-color: black;
+}
+.carousel-control-next-icon{
+background-color: black;
+}
+.bg-gradient-custom {
+background: linear-gradient(90deg, #0a53be 0%, #0d76c1 100%);
+color: #fff;
+}
+.underline {
+width: 80px;
+height: 4px;
+background-color: #fff;
+margin-top: 10px;
+}
+</style>
+   
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-expand-sm transparent">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="download.png" width="80" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" onclick="toggleNavbar()" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <ul id="ul" class="navbar-nav ms-auto ul-custom">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="lifeinsurance.html">Life Insurance</a></li>
+          <li class="nav-item"><a class="nav-link" href="Testimonial.html">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="FAQ.html">FAQs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+<div id="main-content">
+    <div class="bg-gradient-custom">
+        <h2 class="title text-center" style="padding-top:100px">Testimonials</h2>
+        <div class="underline mx-auto"></div>
+        <div class="container">
+            <!-- Carousel Wrapper -->
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Carousel Inner -->
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="testimonial-card text-center">
+                            <img src="https://storage.googleapis.com/hng-offline-marketing.appspot.com/Profile/71001/EMP7100120240823120658327.jpg"
+                                alt="Denis Ritchie" class="testimonial-image" />
+                            <h5 class="mb-1">Denis Ritchie</h5>
+                            <p class="text-muted mb-2">Senior Developer</p>
+                            <p>
+                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dolorum, repudiandae!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://storage.googleapis.com/hng-offline-marketing.appspot.com/Profile/71001/EMP7100120240823120658327.jpg"
+                                alt="Lisa Sthalekar" class="testimonial-image" />
+                            <h5 class="mb-1">Lisa Sthalekar</h5>
+                            <p class="text-muted mb-2">Product Manager</p>
+                            <p>
+                                "Accusamus expedita dicta doloremque! Sapiente quaerat optio
+                                aliquam officia."
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="carousel-item">
+                        <div class="testimonial-card text-center">
+                            <img src="https://storage.googleapis.com/hng-offline-marketing.appspot.com/Profile/71001/EMP7100120240823120658327.jpg"
+                                alt="Elizabeth Ritchie" class="testimonial-image" />
+                            <h5 class="mb-1">Elizabeth Ritchie</h5>
+                            <p class="text-muted mb-2">UI/UX Designer</p>
+                            <p>
+                                "Saepe quo natus aut accusantium alias blanditiis veritatis
+                                magnam repudiandae."
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- End Carousel Inner -->
+
+                <!-- Carousel Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                <!-- End Carousel Controls -->
+            </div>
+            <!-- End Carousel Wrapper -->
+        </div>
+    </div>
+
+</div>
+
+  <!-- Contact Bar -->
+  <section class="footer-top no-padding" style="padding:0; position:relative; bottom:-60px; z-index:1;">
+    <div class="footer-contact-bar bg-primary mx-4 p-2">
+      <div class="row text-white align-items-center p-3 justify-content-between">
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="pl-3">
+            <p class="mb-0">Madiwala, Bangalore‑560068,</p>
+            <p class="mb-0">Karnataka, India</p>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center mb-3 mb-md-0">
+          <div class="icon-box p-2"><i class="fas fa-phone-alt"></i></div>
+          <div class="pl-3"><p class="mb-0">9886646506</p></div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <div class="icon-box p-2"><i class="fas fa-envelope"></i></div>
+          <div class="pl-3"><p class="mb-0">dsingh803@gmail.com</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding-top:120px; position:relative;">
+    <div class="container">
+      <div class="footer-top">
+        <div class="row">
+          <div class="col-md-6 page-more-info">
+            <div class="footer-title"><h4>Page links</h4></div>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="lifeinsurance.html">Life Insurance</a></li>
+              <li><a href="news.html">News</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 open-hours">
+            <div class="footer-title">
+              <h4>Open hours</h4>
+              <ul class="footer-social">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+              </ul>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td><i class="far fa-clock"></i> Monday to Friday</td><td>7:00 AM to 10:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Friday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Saturday</td><td>7:00 AM to 11:00 PM</td></tr>
+                <tr><td><i class="far fa-clock"></i> Sunday</td><td>6:00 AM to 11:00 PM</td></tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="footer-bottom">
+        <div class="row">
+          <div class="col-sm-4"><a href="privacy.html">Privacy policy</a></div>
+          <div class="col-sm-8"><p>©️ 2025 Chang Group Pvt. Ltd. All rights reserved.</p></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script>
+    function toggleNavbar() {
+      var navbar = document.getElementById("navbarSupportedContent");
+      navbar.classList.toggle("show");
+    }
+    function updateNavbarStyle() {
+      var nav = document.getElementById('mainNav');
+      var ul = document.getElementById('ul');
+      if (window.innerWidth < 576) {
+        nav.classList.replace('transparent','custom-navbar');
+        ul.classList.remove('ul-custom');
+      } else {
+        if (window.scrollY > window.innerHeight / 2) {
+          nav.classList.replace('transparent','custom-navbar');
+          ul.classList.remove('ul-custom');
+        } else {
+          nav.classList.replace('custom-navbar','transparent');
+          ul.classList.add('ul-custom');
+        }
+      }
+    }
+    document.addEventListener('scroll', updateNavbarStyle);
+    window.addEventListener('load', updateNavbarStyle);
+    window.addEventListener('resize', updateNavbarStyle);
+  </script>
+</body>
+</html>
